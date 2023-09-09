@@ -1,0 +1,42 @@
+In this project you will learn:
+Common logic in building a mini music player.
+How to use the React hook - useContext
+How to make your own hook by utilizing React Custom Hook and useContext
+
+User story:
+Users are able to see a tracklist or a list of songs.
+Users are able to see a controller with pause, play, next and playback buttons.
+Users are able to play a track and see the track's name displayed.
+Users are able to play, pause or jump from one song to another with the controller.
+
+Project Breakdown
+
+1. Building a Music player
+useContext is needed because we have two child components that share the same information (or state).
+
+The 2 child components includes:
+
+The tracklist:
+
+The controller.
+
+The tracklist and the controller both need to know:
+
+If a track is playing or pausing to render the corresponding UI.
+If a track is playing or pausing to toggle actions. (If pause -> play, if play -> pause)
+If Track 1 is playing and user plays Track 2, Track 1 sees the action and pauses automatically.
+What track is playing, for the controller to display track's name.
+That's a lot of information needed to be shared between two components, which will be more complex and chaotic in bigger projects. Thanks to React and the useContext hook, we are now able to manage these information easier than ever.
+
+2. useContext and useCustomHook
+While useContext helps share information, useCustomHook is here for us to reuse functions - everywhere across the app.
+
+The amazing thing about useContext and useCustomHook is that you can combine them when you need many functions to modify or change one type of information (one piece of state).
+
+Let's store your information (your state) in a custom hook along with all the functions needed. And every time you need the pair of state and function, just write one simple line of code - useCustomHook().
+
+How do all these theories come to life? Let's kick off the miniSpotify.
+
+Demo application: Cs's MiniSpotify https://reliable-sfogliatella-5fb38d.netlify.app/
+
+A site to download free audios: https://pixabay.com/music/
